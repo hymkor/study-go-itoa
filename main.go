@@ -18,7 +18,7 @@ func _up2(n int, w io.Writer) {
 		_up2(n/10, w)
 		n %= 10
 	}
-	w.Write([]byte{"0123456789"[n]})
+	w.Write([]byte{'0' + byte(n)})
 }
 
 func up2(n int, w io.Writer) {
